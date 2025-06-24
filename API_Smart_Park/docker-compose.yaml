@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    image: parking_system
+    container_name: parking_system_container
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ~/.aws:/root/.aws:ro
+    environment:
+      - AWS_DEFAULT_REGION=eu-north-1
+    command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
