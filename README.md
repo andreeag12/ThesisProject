@@ -74,14 +74,14 @@ The project repository is available at:
 2. **Mobile App (React Native)**:  
    - On Android emulator (recommended if you don't have a physical device):
      ```bash
-     cd mobile-app
+     cd SmartMobileApp
      npm install
      npx expo start
      ```
      Then open the Expo Go app on the emulator.
    - Alternatively, on a physical device:
      ```bash
-     cd mobile-app
+     cd SmartMobileApp
      npm install
      npx expo start
      ```
@@ -90,12 +90,10 @@ The project repository is available at:
 3. **Hardware scripts (on Raspberry Pi)**:  
    - For Raspberry Pi 4:
      ```bash
-     cd HardwareControl
      python3 sensorControl.py
      ```
    - For Raspberry Pi Zero 2W:
      ```bash
-     cd HardwareControl
      python3 cameraControl.py
      ```
 
@@ -125,7 +123,7 @@ The project repository is available at:
      ```
   4. The backend will send images to the API and receive the recognized license plate as a string.
 - AWS credentials for DynamoDB and SNS must be configured in the backend.  
-  - Set the credentials as environment variables in `docker-compose.yml`:
+  - Set the credentials as environment variables in `docker-compose.yaml`:
     ```yaml
     environment:
       AWS_ACCESS_KEY_ID: "your_access_key"
@@ -135,28 +133,28 @@ The project repository is available at:
   - This allows the backend FastAPI container to access AWS services correctly.
 
 ## Project Structure
+
 SMARTPARKING/ (root project folder)
-│
 ├── API_Smart_Park/           # Backend
 │   ├── src/                  # Python modules, routers, imports
 │   ├── main.py               # Includes all routers
-│   ├── uploads/              # Contains the captured image
+│   ├── uploads/              # Contains captured images from camera
 │   ├── Dockerfile
 │   ├── docker-compose.yml
 │   └── requirements.txt
 │
 ├── HardwareControl/          # Hardware scripts
-│   ├── sensorControl.py
-│   └── cameraControl.py
+│   ├── sensorControl.py      # Controls sensors on Raspberry Pi 4
+│   └── cameraControl.py      # Controls camera on Raspberry Pi Zero 2W
 │
-├── SmartMobileApp/            # Mobile app
-|    ├── api/                  # Services: authentication, plates, reservations
-|    ├── app.json              # Main configuration of the mobile app
-|    ├── index.js              # For setting up the environment properly
-|    └── [frontend screens]    # All React Native UI files for the app screens
-|
-├── .gitignore                 # Git ignore file             
-└── README.md
+├── SmartMobileApp/           # Mobile app (React Native)
+│   ├── api/                  # Services: authentication, plates, reservations
+│   ├── app.json              # Main configuration of the mobile app
+│   ├── index.js              # Entry point for the app
+│   └── [frontend screens]    # All React Native UI files for app screens
+│
+└── .gitignore                # Git ignore file (ignores binaires, env, etc.)
+
 
 ## Authors
 - Galetan Andreea
