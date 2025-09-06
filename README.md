@@ -15,7 +15,7 @@ This project proposes a smart parking system that automates the process for dete
 
 ## Repository
 The project repository is available at:  
-[TODO: Insert repository link here]  
+[SMARTPARKING GitHub Repository](https://github.com/andreeag12/ThesisProject)
 
 ## Technologies Used
 - **Hardware & Sensors**:
