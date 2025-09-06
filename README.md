@@ -133,7 +133,7 @@ The project repository is available at:
   - This allows the backend FastAPI container to access AWS services correctly.
 
 ## Project Structure
-
+```
 SMARTPARKING/ (root project folder)
 ├── API_Smart_Park/           # Backend
 │   ├── src/                  # Python modules, routers, imports
@@ -153,8 +153,8 @@ SMARTPARKING/ (root project folder)
 │   ├── index.js              # Entry point for the app
 │   └── [frontend screens]    # All React Native UI files for app screens
 │
-└── .gitignore                # Git ignore file (ignores binaires, env, etc.)
-
+└── .gitignore                # Git ignore file (ignores binaries, env, etc.)
+```
 
 ## Authors
 - Galetan Andreea
