@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Node / React Native
+node_modules/
+npm-debug.log
+yarn-error.log
+.expo/
+.expo-shared/
+*.expo.js
+
+# Docker
+*.env
+docker-compose.override.yml
+**/Dockerfile
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Raspberry Pi / Hardware
+*.bin
+*.o
+*.out
+*.log
